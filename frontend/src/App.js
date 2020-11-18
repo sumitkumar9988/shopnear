@@ -8,6 +8,9 @@ import CartScreen from './screens/CartScreen'
 import LoginScreen from './screens/LoginScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import RegisterScreen from './screens/RegisterScreen'
+import ShippingScreen from './screens//ShippingScreen'
+import PaymentScreen from './screens/PaymentScreen'
+import PlaceOrderScreen from './screens/PlaceOrderScreen'
 import {BrowserRouter as Router,Route} from 'react-router-dom'
 
 function App() {
@@ -18,9 +21,12 @@ function App() {
           <Container>
               <Route path='/' component={HomeScreen} exact/>
               <Route path='/product/:id' component={ProductScreen} />
+              <Route path='/shipping' component={ShippingScreen} />
+              <Route path='/payment' component={PaymentScreen} />
               <Route path='/cart/:id?' component={CartScreen} />
               <Route path='/login' component={LoginScreen} />
               <Route path='/profile' component={ProfileScreen} />
+              <Route path='/placeorder' component={PlaceOrderScreen} />
               <Route path='/register' component={RegisterScreen} />
           </Container>
         </main>
