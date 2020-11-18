@@ -10,8 +10,8 @@ const Header = () => {
     const userLogin=useSelector(state=>state.userLogin)
     const {userInfo}=userLogin;
     useEffect(() => {
-        
-      }, [userInfo])
+
+    }, [userInfo])
     const logoutHandler=(e)=>{
         e.preventDefault()
         dispatch(userLogout())
@@ -42,7 +42,7 @@ const Header = () => {
                                             
                                         </NavDropdown>) :  (<LinkContainer to="/login">
                                             <Nav.Link >
-                                                <i className="fas fa-user"></i>Sign Ip
+                                                <i className="fas fa-user"></i>Sign In
                                             </Nav.Link>
                                         </LinkContainer>)
                                         }
@@ -56,6 +56,6 @@ const Header = () => {
                     </Navbar>
         </header>
     )
-}
+} 
 
 export default Header
